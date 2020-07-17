@@ -1,0 +1,134 @@
+.page-header {
+  min-height: 825px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.page-header__toggle {
+  display: none;
+}
+
+.page-header__wrapper {
+  min-height: 825px;
+
+  background-color: #222222;
+  background-image: url("../img/banner-desktop.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.page-header__container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 61.1%;
+  margin: 0 auto;
+  padding-top: 318px;
+}
+
+.page-header__logo-title-wrapper {
+  width: 43.6%;
+  color: $color-white;
+  letter-spacing: -0.005em;
+}
+
+.page-header__title {
+  margin-bottom: 0;
+  padding-bottom: 6px;
+
+  font-size: 46px;
+  line-height: 139%;
+  font-weight: 700;
+}
+
+.page-header__text {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 160%;
+
+  opacity: 0.8;
+}
+
+.page-header__form-wrapper {
+  width: 37.2%;
+}
+
+@media (max-width: $tablet-width) {
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__toggle {
+    display: block;
+  }
+
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    width: 112px;
+    height: 70px;
+  }
+
+  .page-header__logo-image {
+    margin: auto;
+  }
+
+  .page-header__wrapper {
+    height: 340px;
+    min-height: auto;
+
+    background-image: url("../img/banner-tablet.jpg");
+  }
+
+  .page-header__container {
+    flex-direction: column;
+
+    width: 55%;
+    padding-top: 114px;
+  }
+
+  .page-header__logo-title-wrapper {
+    width: 100%;
+    padding-bottom: 132px;
+  }
+
+  .page-header__title {
+    font-size: 30px;
+    line-height: 140%;
+    text-align: center;
+  }
+
+  .page-header__text {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .page-header__form-wrapper {
+    width: 76%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-header__logo {
+    width: 101px;
+  }
+
+  .page-header__container {
+    width: 90%;
+    padding-top: 100px;
+  }
+
+  .page-header__logo-title-wrapper {
+    padding-bottom: 125px;
+  }
+
+  .page-header__form-wrapper {
+    width: 100%;
+  }
+}

@@ -1,0 +1,66 @@
+.toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.toggle__button {
+  position: relative;
+
+  display: block;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  background-color: $color-aqua;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    @include center-position();
+
+    width: 22px;
+    height: 1px;
+
+    background-color: $color-black;
+    box-shadow:
+      $color-black 0 -6px 0 0,
+      $color-black 0 6px 0 0;
+  }
+
+  &--cross {
+    background-color: transparent;
+
+    z-index: 10;
+  }
+
+  &--cross::before {
+    transform: rotate(45deg);
+    left: 18%;
+
+    width: 33px;
+    box-shadow: none;
+    background-color: #d0d0d1;
+  }
+
+  &--cross::after {
+    position: absolute;
+    content: "";
+    left: 18%;
+
+    @include center-position();
+
+    width: 33px;
+    height: 1px;
+    transform: rotate(-45deg);
+
+    background-color: #d0d0d1;
+  }
+
+  &--cross:active {
+    background-color: transparent;
+  }
+}
