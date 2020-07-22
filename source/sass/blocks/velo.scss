@@ -1,0 +1,120 @@
+.velo {
+  min-height: 1038px;
+
+  background-color: #f6f7f9;
+}
+
+.velo__wrapper {
+  width: 86.5%;
+  max-width: 1154px;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-left: 24px;
+}
+
+.velo__title {
+  margin: 0;
+  padding-right: 36px;
+  padding-bottom: 50px;
+
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.005em;
+  color: $color-black;
+}
+
+.velo__list {
+  position: relative;
+  height: 651px;
+}
+
+.velo__item {
+  position: absolute;
+
+  &--left {
+    top: 10px;
+    left: 0;
+  }
+
+  &--middle {
+    top: 39px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &--right {
+    top: 0;
+    right: 0;
+  }
+}
+
+.velo__image {
+  position: relative;
+  z-index: 10;
+
+  display: block;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+
+    width: 31px;
+    height: 31px;
+
+
+    border: 8px solid #0AD9C6;
+  }
+
+  &--left::before {
+    top: 49%;
+    left: 32px;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+    width: 126px;
+    height: 126px;
+
+    border: 27px solid #0AD9C6;
+    border-radius: 50%;
+  }
+
+  &--left::after,
+  &--right::after {
+    display: none;
+  }
+
+  &--middle::before {
+    top: 5px;
+    left: 5px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--middle::after {
+    right: -46px;
+    bottom: -46px;
+    transform: translate(-50%, -50%);
+  }
+
+  &--right::before {
+    top: -32px;
+    right: -34px;
+
+    width: 60px;
+    height: 60px;
+
+    border: 17px solid #0AD9C6;
+    border-radius: 50%;
+  }
+}
+
+.velo__text {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 155%;
+  text-align: center;
+  letter-spacing: -0.5px;
+  color: $color-black;
+}
