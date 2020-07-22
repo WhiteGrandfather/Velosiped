@@ -8,27 +8,29 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
   <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/Overpass-Regular.woff2" as="font" type="font/woff2" crossorigin="">
+  <link rel="preload" href="fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin="">
 </head>
 <body>
 
   <header class="page-header">
     <div class="page-header__toggle toggle">
-      <button class="toggle__button" type="button"></button>
+      <button class="toggle__button" type="button" aria-label="open menu"></button>
     </div>
 
     <nav class="page-header__nav nav nav--no-js">
       <ul class="nav__list">
         <li class="nav__item">
-          <a href="" class="nav__link">О нас</a>
+          <a href="#about-block" class="nav__link">О нас</a>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">Виды велосипедов</a>
+          <a href="#velo-block" class="nav__link">Виды велосипедов</a>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">Видео про велосипеды</a>
+          <a href="#video-block" class="nav__link">Видео про велосипеды</a>
         </li>
         <li class="nav__item">
-          <a href="" class="nav__link">Контакты</a>
+          <a href="#contacts-block" class="nav__link">Контакты</a>
         </li>
       </ul>
     </nav>
@@ -37,9 +39,9 @@
       <div class="page-header__container">
 
         <div class="page-header__logo-title-wrapper">
-          <div class="page-header__logo">
+          <a class="page-header__logo">
             <img src="img/logo.svg" width="68" height="21" alt="" class="page-header__logo-image">
-          </div>
+          </a>
           <h1 class="page-header__title">Мы продаем велосипеды</h1>
           <p class="page-header__text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
         </div>
@@ -49,10 +51,10 @@
             <h2 class="form__title">Заполните поля ниже и мы подберем велосипед Вашей мечты</h2>
             <ul class="form__list">
               <li class="form__item">
-                <input class="form__input" type="text" name="name" placeholder="Введите Ваше Имя" required>
+                <input class="form__input" type="text" name="name" placeholder="Введите Ваше Имя" aria-label="name" required>
               </li>
               <li class="form__item">
-                <input class="form__input" type="tel" name="phone" placeholder="Введите Ваш номер телефона" required>
+                <input class="form__input" type="tel" name="phone" placeholder="Введите Ваш номер телефона" aria-label="phone" required>
               </li>
               <li class="form__item">
                 <button class="form__input form__input--button" type="submit">Подобрать велосипед мечты</button>
@@ -67,7 +69,7 @@
   </header>
 
   <main class="page-main">
-    <div class="page-main__fact fact">
+    <div class="page-main__fact fact" id="about-block">
       <h2 class="fact__title">Несколько фактов о нас</h2>
       <ul class="fact__list">
         <li class="fact__item">
@@ -89,7 +91,7 @@
       </ul>
     </div>
 
-    <div class="page-main__velo velo">
+    <div class="page-main__velo velo" id="velo-block">
       <div class="velo__wrapper">
         <h2 class="velo__title">Виды велосипедов</h2>
         <ul class="velo__list">
@@ -119,21 +121,21 @@
 
     </div>
 
-    <div class="page-main__video video">
+    <div class="page-main__video video" id="video-block">
       <h2 class="video__title">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
       <div class="video__player">
-        <button class="video__control" type="button"></button>
+        <button class="video__control" type="button" aria-label="play"></button>
       </div>
     </div>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer" id="contacts-block">
     <div class="page-footer__wrapper">
       <h2 class="page-footer__title">Как нас найти?</h2>
       <p class="page-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       <div class="page-footer__map-wrapper">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d2a5d26317621f8d0a4e8cc5588fd1a84fa134c47d6d257ee1ca7edba5f7d3&amp;source=constructor"></iframe>
+        <iframe title="location map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d2a5d26317621f8d0a4e8cc5588fd1a84fa134c47d6d257ee1ca7edba5f7d3&amp;source=constructor"></iframe>
       </div>
       <ul class="page-footer__contacts-list">
         <li class="page-footer__contact">
