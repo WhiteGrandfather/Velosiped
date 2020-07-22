@@ -51,17 +51,63 @@
 
 @media (max-width: $tablet-width) {
   .fact {
+    min-height: 489px;
     padding-top: 64px;
   }
 
   .fact__title {
     font-size: 24px;
     line-height: 41px;
+    padding-bottom: 1px;
   }
 
-  
+  .fact__list {
+    min-width: 550px;
+    width: 70%;
+    margin: 0 auto;
+  }
 
   .fact__item {
-    width: 45%;
+    width: 263px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .fact {
+    width: auto;
+    min-height: 836px;
+    padding-top: 71px;
+  }
+
+  .fact__list {
+    justify-content: center;
+
+    min-width: auto;
+    padding-top: 32px;
+  }
+
+  .fact__item {
+    width: 278px;
+  }
+
+  .fact__number {
+    margin: 0;
+
+    font-family: "Overpass", "Arial", sans-serif;
+    font-size: 28px;
+    line-height: 136%;
+  }
+
+  .fact__text {
+
+    padding-top: 16px;
+    padding-bottom: 22px;
+
+    font-family: "Overpass", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 189%;
+    letter-spacing: 0.3px;
   }
 }

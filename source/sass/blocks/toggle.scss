@@ -34,7 +34,7 @@
   &--cross {
     background-color: transparent;
 
-    z-index: 10;
+    z-index: 100;
   }
 
   &--cross::before {
@@ -50,8 +50,6 @@
     position: absolute;
     content: "";
     left: 18%;
-
-    @include center-position();
 
     width: 33px;
     height: 1px;

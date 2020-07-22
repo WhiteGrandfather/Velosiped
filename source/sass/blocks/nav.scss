@@ -49,11 +49,18 @@
     width: 100%;
     min-height: 100vh;
     padding: 0;
-  }
 
-  .nav__no-js,
-  .nav__active {
-    display: block;
+    &--no-js {
+      display: block;
+    }
+
+    &--active {
+      display: block;
+      position: absolute;
+      top: 0;
+
+      background-color: $color-white;
+    }
   }
 
   .nav__list {

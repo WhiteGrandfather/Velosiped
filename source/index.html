@@ -16,7 +16,7 @@
       <button class="toggle__button" type="button"></button>
     </div>
 
-    <nav class="page-header__nav nav">
+    <nav class="page-header__nav nav nav--no-js">
       <ul class="nav__list">
         <li class="nav__item">
           <a href="" class="nav__link">О нас</a>
@@ -95,21 +95,21 @@
         <ul class="velo__list">
           <li class="velo__item velo__item--left">
             <picture class="velo__image velo__image--left">
-              <source srcset="img/bike-1.jpg" media="(max-width: 1439px)">
+              <source srcset="img/bike-1.png" media="(max-width: 1439px)">
               <img src="img/bike-1-desktop.jpg" width="342" height="503" alt="фото елосипеда">
             </picture>
             <p class="velo__text">Дорожный велосипед</p>
           </li>
           <li class="velo__item velo__item--middle">
             <picture class="velo__image velo__image--middle">
-              <source srcset="img/bike-2.jpg" media="(max-width: 1439px)">
+              <source srcset="img/bike-2.png" media="(max-width: 1439px)">
               <img src="img/bike-2-desktop.jpg" width="342" height="566" alt="фото елосипеда">
             </picture>
             <p class="velo__text">Горный велосипед</p>
           </li>
           <li class="velo__item velo__item--right">
             <picture class="velo__image velo__image--right">
-              <source srcset="img/bike-3.jpg" media="(max-width: 1439px)">
+              <source srcset="img/bike-3.png" media="(max-width: 1439px)">
               <img src="img/bike-3-desktop.jpg" width="342" height="513" alt="фото елосипеда">
             </picture>
             <p class="velo__text">Детский велосипед</p>
@@ -123,7 +123,7 @@
       <h2 class="video__title">Видео про велосипеды</h2>
       <p class="video__text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
       <div class="video__player">
-        <button class="video__control" type="button"></div>
+        <button class="video__control" type="button"></button>
       </div>
     </div>
   </main>
@@ -133,11 +133,11 @@
       <h2 class="page-footer__title">Как нас найти?</h2>
       <p class="page-footer__text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
       <div class="page-footer__map-wrapper">
-        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d2a5d26317621f8d0a4e8cc5588fd1a84fa134c47d6d257ee1ca7edba5f7d3&amp;source=constructor" width="957" height="530" frameborder="0"></iframe>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A15d2a5d26317621f8d0a4e8cc5588fd1a84fa134c47d6d257ee1ca7edba5f7d3&amp;source=constructor"></iframe>
       </div>
       <ul class="page-footer__contacts-list">
         <li class="page-footer__contact">
-          <a  href="mailto:puteshestviemechta@gmail.ru"class="page-footer__link page-footer__link--mail">puteshestviemechta@gmail.ru</a>
+          <a  href="mailto:puteshestviemechta@gmail.ru" class="page-footer__link page-footer__link--mail">puteshestviemechta@gmail.ru</a>
         </li>
         <li class="page-footer__contact">
           <a href="tel:749978468446" class="page-footer__link page-footer__link--phone">+7 (499) -784-684-46</a>
@@ -145,5 +145,7 @@
       </ul>
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

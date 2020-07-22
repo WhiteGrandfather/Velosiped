@@ -27,7 +27,7 @@
 
 .velo__list {
   position: relative;
-  height: 651px;
+  min-height: 651px;
 }
 
 .velo__item {
@@ -64,8 +64,7 @@
     width: 31px;
     height: 31px;
 
-
-    border: 8px solid #0AD9C6;
+    border: 8px solid $color-aqua;
   }
 
   &--left::before {
@@ -77,7 +76,7 @@
     width: 126px;
     height: 126px;
 
-    border: 27px solid #0AD9C6;
+    border: 27px solid $color-aqua;
     border-radius: 50%;
   }
 
@@ -105,7 +104,7 @@
     width: 60px;
     height: 60px;
 
-    border: 17px solid #0AD9C6;
+    border: 17px solid $color-aqua;
     border-radius: 50%;
   }
 }
@@ -117,4 +116,109 @@
   text-align: center;
   letter-spacing: -0.5px;
   color: $color-black;
+}
+
+@media (max-width: $tablet-width) {
+  .velo {
+    min-height: auto;
+  }
+
+  .velo__wrapper {
+    width: 83%;
+    min-height: 949px;
+    padding-top: 50px;
+  }
+
+  .velo__title {
+    padding-bottom: 30px;
+
+    font-size: 24px;
+    line-height: 171%;
+  }
+
+  .velo__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    min-width: 600px;
+    width: 70%;
+    margin: auto;
+  }
+
+  .velo__item {
+    position: initial;
+    transform: none;
+
+    width: 270px;
+    padding-bottom: 26px;
+
+    &--right {
+      margin: 0 auto;
+    }
+  }
+
+  .velo__image {
+    &--left::before {
+      top: 88.3%;
+      left: 26px;
+
+      width: 91px;
+      height: 91px;
+
+      border: 18px solid $color-aqua;
+    }
+
+    &--middle::before,
+    &--middle::after {
+      display: none;
+    }
+
+    &--right::before {
+      top: -20px;
+      right: -25px;
+      width: 42px;
+      height: 42px;
+
+      border: 13px solid $color-aqua;
+    }
+  }
+
+  .velo__image img {
+    width: 270px;
+    height: 300px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .velo__wrapper {
+    width: auto;
+    min-height: 1322px;
+    padding-left: 0;
+  }
+
+  .velo__title {
+    padding-right: 0;
+    padding-bottom: 31px;
+  }
+
+  .velo__list {
+    min-width: auto;
+    width: 320px;
+    justify-content: center;
+  }
+
+  .velo__item {
+    padding-bottom: 18px;
+  }
+
+  .velo__image {
+    &--left::before {
+      left: 40px;
+    }
+
+    &--right::before {
+      right: -15px;
+    }
+  }
 }
